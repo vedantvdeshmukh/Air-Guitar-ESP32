@@ -1,13 +1,12 @@
 import serial
 import pygame
 
-port = "COM11" 
-""   # change if needed
+port = "COM5"
 baud_rate = 115200
 
+pygame.mixer.pre_init(44100, -16, 2, 512)
 pygame.mixer.init()
 
-# Match ESP32 output exactly
 sounds = {
     "C": pygame.mixer.Sound("sounds/c_major.wav"),
     "G": pygame.mixer.Sound("sounds/g_major.wav"),
@@ -26,7 +25,7 @@ try:
 
     while True:
         if esp.in_waiting > 0:
-            data = esp.readline().decode().strip()
+            data = esp.readline().decode(errors='ignore').strip()
             print("Received:", data)
 
             if data in sounds:

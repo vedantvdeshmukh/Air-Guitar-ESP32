@@ -1,6 +1,6 @@
 #include <Wire.h>
-#include <MPU6050.h>
-
+#include "I2Cdev.h"
+#include "MPU6050.h"
 MPU6050 mpu;
 
 // Button pins
@@ -10,8 +10,8 @@ MPU6050 mpu;
 
 // Strum control
 unsigned long lastStrumTime = 0;
-const int strumDelay = 300;   // cooldown
-const int threshold = 15000;  // adjust if needed
+const int strumDelay = 80 ;    // 🔥 reduced from 400 → FAST response
+const int threshold = 12000;  // adjust if needed
 
 void setup() {
   Serial.begin(115200);
@@ -21,7 +21,11 @@ void setup() {
   pinMode(B3, INPUT_PULLUP);
 
   Wire.begin();
+  Wire.setClock(400000); // 🔥 faster MPU communication
+
   mpu.initialize();
+
+  Serial.setTimeout(5); // 🔥 faster serial
 
   Serial.println("Air Guitar Ready");
 }
@@ -37,7 +41,7 @@ String getChord() {
   if (!b1 && b2 && b3)   return "F";
   if (b1 && !b2 && !b3)  return "G";
   if (b1 && !b2 && b3)   return "A";
-  if (b1 && b2 && !b3)   return "B";
+  if (b1 && b2 && !b3)   return "Em";
   if (b1 && b2 && b3)    return "Am";
 
   return "C";
@@ -47,15 +51,14 @@ void loop() {
   int16_t ax, ay, az;
   mpu.getAcceleration(&ax, &ay, &az);
 
- unsigned long currentTime = millis();
+  unsigned long currentTime = millis();
 
-if ((ay > threshold || ay < -threshold) && 
-    (currentTime - lastStrumTime > strumDelay)) {
-
-    lastStrumTime = currentTime;   // update timer
+  // 🔥 improved strum detection (fast + clean)
+  if (abs(ay) > threshold && (currentTime - lastStrumTime > strumDelay)) {
 
     String chord = getChord();
     Serial.println(chord);
 
+    lastStrumTime = currentTime;
   }
 }
