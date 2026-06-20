@@ -12,7 +12,7 @@ Play guitar without strings, select chords using buttons on a glove, swing your 
 <p align="center">
   <img src="images/actual_model.jpeg" width="30%" alt="Actual Model"/>
   <img src="images/awardwinning.jpeg" width="30%" alt="Award Winning"/>
-  <img src="images/interaction_with_vc.jpeg" width="30%" alt="Interaction with VC"/>
+  <img src="images/interaction_with_vc.jpg" width="30%" alt="Interaction with VC"/>
 </p>
 
 <p align="center">
@@ -65,11 +65,11 @@ Glove Buttons + MPU6050 → ESP32 → Bluetooth → Python App → Audio Output
 
 <p align="center">
   <img src="images/circuit.jpeg" width="45%" alt="Circuit Diagram"/>
-  <img src="images/ESP32-Pinout.jpeg" width="45%" alt="ESP32 Pinout"/>
+  <img src="images/ESP32-Pinout.jpg" width="45%" alt="ESP32 Pinout"/>
 </p>
 
 <p align="center">
-  <img src="images/mpu-pinout.jpeg" width="45%" alt="MPU6050 Pinout"/>
+  <img src="images/mpu-pinout.png" width="45%" alt="MPU6050 Pinout"/>
 </p>
 
 ---
