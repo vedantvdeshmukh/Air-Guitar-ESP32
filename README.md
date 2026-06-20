@@ -10,14 +10,14 @@ Play guitar without strings, select chords using buttons on a glove, swing your 
 ## 📸 Project Gallery
 
 <p align="center">
-  <img src="images/actual_model.jpg" width="30%" alt="Actual Model"/>
-  <img src="images/awardwinning.jpg" width="30%" alt="Award Winning"/>
-  <img src="images/interaction_with_vc.jpg" width="30%" alt="Interaction with VC"/>
+  <img src="images/actual_model.jpeg" width="30%" alt="Actual Model"/>
+  <img src="images/awardwinning.jpeg" width="30%" alt="Award Winning"/>
+  <img src="images/interaction_with_vc.jpeg" width="30%" alt="Interaction with VC"/>
 </p>
 
 <p align="center">
-  <img src="images/grpphoto.jpg" width="45%" alt="Group Photo"/>
-  <img src="images/grpphoto1.jpg" width="45%" alt="Group Photo 1"/>
+  <img src="images/grpphoto.jpeg" width="45%" alt="Group Photo"/>
+  <img src="images/grpphoto1.jpeg" width="45%" alt="Group Photo 1"/>
 </p>
 
 ---
@@ -64,12 +64,12 @@ Glove Buttons + MPU6050 → ESP32 → Bluetooth → Python App → Audio Output
 ## 🔌 Circuit & Pinouts
 
 <p align="center">
-  <img src="images/circuit.jpg" width="45%" alt="Circuit Diagram"/>
-  <img src="images/ESP32-Pinout.jpg" width="45%" alt="ESP32 Pinout"/>
+  <img src="images/circuit.jpeg" width="45%" alt="Circuit Diagram"/>
+  <img src="images/ESP32-Pinout.jpeg" width="45%" alt="ESP32 Pinout"/>
 </p>
 
 <p align="center">
-  <img src="images/mpu-pinout.jpg" width="45%" alt="MPU6050 Pinout"/>
+  <img src="images/mpu-pinout.jpeg" width="45%" alt="MPU6050 Pinout"/>
 </p>
 
 ---
@@ -77,7 +77,7 @@ Glove Buttons + MPU6050 → ESP32 → Bluetooth → Python App → Audio Output
 ## 📄 Project Poster
 
 <p align="center">
-  <img src="docs/project_poster.jpg" width="70%" alt="Air Guitar Project Poster"/>
+  <img src="docs/project_poster.jpeg" width="70%" alt="Air Guitar Project Poster"/>
 </p>
 
 ---
@@ -123,17 +123,17 @@ Air-Guitar-ESP32/
 │   └── g_major.wav
 │
 ├── images/                       # Project photos & diagrams
-│   ├── actual_model.jpg
-│   ├── awardwinning.jpg
-│   ├── circuit.jpg
-│   ├── ESP32-Pinout.jpg
-│   ├── mpu-pinout.jpg
-│   ├── grpphoto.jpg
-│   ├── grpphoto1.jpg
-│   └── interaction_with_vc.jpg
+│   ├── actual_model.jpeg
+│   ├── awardwinning.jpeg
+│   ├── circuit.jpeg
+│   ├── ESP32-Pinout.jpeg
+│   ├── mpu-pinout.jpeg
+│   ├── grpphoto.jpeg
+│   ├── grpphoto1.jpeg
+│   └── interaction_with_vc.jpeg
 │
 ├── docs/                         # Report & documentation
-│   └── project_poster.jpg
+│   └── project_poster.jpeg
 └── README.md
 ```
 
